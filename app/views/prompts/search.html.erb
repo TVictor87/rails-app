@@ -1,0 +1,30 @@
+<h1>Elastic search for prompts</h1>
+
+<%= form_for :search_prompts, url: search_prompts_path, method: :get do |form| %>
+  <%= form.text_field :query, value: params[:search_prompts].presence && params[:search_prompts][:query] %>
+  <%= form.submit 'Search' %>
+<% end %>
+
+<% unless @prompts.nil? %>
+  <% if @prompts.empty? %>
+    <h2>No prompts found matching your query.</h2>
+    
+  <% else %>
+    <h2>Search results</h2>
+    <table style="width: 100%;">
+      <thead>
+      <tr>
+        <th>Text</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @prompts.each do |prompt| %>
+        <tr>
+          <td><%= prompt.text %></td>
+        </tr>
+      <% end %>
+      <tbody>
+      </table>
+  <% end %>
+<% end %>
