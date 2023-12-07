@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Elastic Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +11,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="logo">
+        <%= image_tag('logo.svg', alt: 'Logo') %>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Search', search_prompts_path %></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p class="footer-text">CG Trader</p>
+    </footer>
   </body>
 </html>

@@ -13,3 +13,67 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and take up remaining space */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px; /* Adjust the height as needed */
+  filter: brightness(0) invert(1); /* Make the logo completely white */
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #fff; /* Change the background color to match the footer */
+  margin: 20px 0;
+}
+
+.footer-text {
+  color: #fff;
+}

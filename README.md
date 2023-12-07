@@ -1,5 +1,3 @@
-# README
-
 # Rails App with Elasticsearch and PostgreSQL
 
 ## Import Prompts:
